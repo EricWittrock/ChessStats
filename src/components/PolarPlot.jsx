@@ -59,9 +59,6 @@ function PolarPlot({ card }) {
             min: 0,
             max: 100,
             beginAtZero: true,
-            angleLines: {
-              display: true,
-            },
             ticks: {
               stepSize: 20,
               display: false,
@@ -75,7 +72,8 @@ function PolarPlot({ card }) {
               color: "#48484a",
             },
             angleLines: {
-              color: '#48484a'
+              color: '#48484a',
+              display: true,
             }
           },
         },
