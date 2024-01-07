@@ -1,2 +1,2 @@
 # ChessStats
-A website that analyzes various chess openings
+A website that analyzes various chess openings.
