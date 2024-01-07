@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./src/assets/favicon.ico?v=2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truth</title>
+  </head>
+  <body>
+    <h1>Info</h1>
+    <p>This page isn't as pretty</p>
+    <p>But that's OK</p>
+    <p>Because you are a truth-seeker</p>
+    <p>And you are only here for the truth</p>
+    <hr>
+
+    <h3>Theory Slider</h3>
+    <p>
+      Theory typically refers to the move sequences in an opening that are known and well documented. Openings may be highly theoretical if they contain long forcing lines, have many viable choices, and are somewhat popular.
+      <br>
+      Describing theory analytically involves the ratio of common lines to uncommon lines. This is not a perfect representation, but it serves as a decent proxy for now.
+    </p>
+    <hr>
+    <h3>Mistakes Slider</h3>
+    <p>
+      Openings that contain very common inaccuracies or somewhat-frequent blunders are ranked high in “Mistakes”.
+      <br>
+      The "Mistakes" statistic of a given opening, O, is calculated by:
+    </p>
+    <img src="./src/assets/mistakesEq.png" alt="Mistakes Equation" />
+    <p>
+      <b>m</b> is the set of all possible moves in the opening, O (below a specified depth).
+      <br>
+      <b>E(m<sub>n</sub>)</b> is the computer's evaluation of the game after move m<sub>n</sub>. |E(m<sub>n-1</sub>)-E(m<sub>n</sub>)| is the change in evaluation after a move.
+      <br>
+      <b>N(m<sub>n</sub>)</b> is the number of times the move m<sub>n</sub> is played in opening O. The purpose of this is to give more weight to the mistakes that happen frequently
+      <br>
+      <b>2.5</b> is an arbitrary constant. If it were greater (&gt;3.0), blunders would contribute more to the statistic. If it were smaller (&lt;2.0), abundant, minor inaccuracies would be prominent. A value somewhere in the middle attempts to catch both small mistakes and huge blunders.
+    </p>
+    <hr>
+    
+    <h3>Eval Slider</h3>
+    <p>
+      "Eval" refers to a computer's evaluation of the opening position. The eval for every opening was determined by Stockfish 16, at a depth of 50.
+    </p>
+    <hr>
+
+    <h3>Length Slider</h3>
+    <p>
+      "Length" refers to the average number of moves per game that started with the given opening.
+    </p>
+    <img src="./src/assets/lengthEq.png" alt="Length Equation" />
+    <hr>
+
+    <h3>Draws Slider</h3>
+    <p>
+      "Draws" refers to the frequency of a drawn games that started with the given opening.
+    </p>
+    <img src="./src/assets/drawsEq.png" alt="Draws Equation" />
+    <hr>
+
+    <h3>Popularity Slider</h3>
+    <p>
+      "Popularity" refers to the number of times the given opening was played in the sample of 30 million games.
+    </p>
+    
+  </body>
+</html>
